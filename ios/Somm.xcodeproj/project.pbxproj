@@ -17,6 +17,9 @@
 		EF80EACEE82B44BEB4C89C55 /* CedarvilleCursive-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B291F50AE34C26A6B5C456 /* CedarvilleCursive-Regular.ttf */; };
 		7AFA1CA9CD5249DAB8F4AA3B /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAEE68AA0DF4414487674EA4 /* Pacifico-Regular.ttf */; };
 		1B874480409E4FFAAFA81631 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85E559F2E26B4402A43A5F6A /* Satisfy-Regular.ttf */; };
+		67374D3CCBC14DFF89E99086 /* CedarvilleCursive-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AC629A328E66424AB0205C20 /* CedarvilleCursive-Regular.ttf */; };
+		5AD23C3A5542426ABFC9CD7D /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 58F2FE2AB19A4C4F8E9110A1 /* Pacifico-Regular.ttf */; };
+		28C0D1B1CC584F8DA7C9919B /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FAA0E2E49E647C99A93576F /* Satisfy-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,9 @@
 		20B291F50AE34C26A6B5C456 /* CedarvilleCursive-Regular.ttf */ = {isa = PBXFileReference; name = "CedarvilleCursive-Regular.ttf"; path = "../Assets/Fonts/CedarvilleCursive-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BAEE68AA0DF4414487674EA4 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; name = "Pacifico-Regular.ttf"; path = "../Assets/Fonts/Pacifico-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		85E559F2E26B4402A43A5F6A /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; name = "Satisfy-Regular.ttf"; path = "../Assets/Fonts/Satisfy-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		AC629A328E66424AB0205C20 /* CedarvilleCursive-Regular.ttf */ = {isa = PBXFileReference; name = "CedarvilleCursive-Regular.ttf"; path = "../src/Assets/Fonts/CedarvilleCursive-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		58F2FE2AB19A4C4F8E9110A1 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; name = "Pacifico-Regular.ttf"; path = "../src/Assets/Fonts/Pacifico-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2FAA0E2E49E647C99A93576F /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; name = "Satisfy-Regular.ttf"; path = "../src/Assets/Fonts/Satisfy-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,9 @@
 				20B291F50AE34C26A6B5C456 /* CedarvilleCursive-Regular.ttf */,
 				BAEE68AA0DF4414487674EA4 /* Pacifico-Regular.ttf */,
 				85E559F2E26B4402A43A5F6A /* Satisfy-Regular.ttf */,
+				AC629A328E66424AB0205C20 /* CedarvilleCursive-Regular.ttf */,
+				58F2FE2AB19A4C4F8E9110A1 /* Pacifico-Regular.ttf */,
+				2FAA0E2E49E647C99A93576F /* Satisfy-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -266,6 +275,9 @@
 				EF80EACEE82B44BEB4C89C55 /* CedarvilleCursive-Regular.ttf in Resources */,
 				7AFA1CA9CD5249DAB8F4AA3B /* Pacifico-Regular.ttf in Resources */,
 				1B874480409E4FFAAFA81631 /* Satisfy-Regular.ttf in Resources */,
+				67374D3CCBC14DFF89E99086 /* CedarvilleCursive-Regular.ttf in Resources */,
+				5AD23C3A5542426ABFC9CD7D /* Pacifico-Regular.ttf in Resources */,
+				28C0D1B1CC584F8DA7C9919B /* Satisfy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
