@@ -14,6 +14,9 @@
 		3EA0B95D99D36FBE9EACEEFE /* libPods-Somm-SommTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 90E47239F5092C5E6E31F30D /* libPods-Somm-SommTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		B0A4BA53F58B67C1A5573D62 /* libPods-Somm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 45467B652F575A2A7757934A /* libPods-Somm.a */; };
+		EF80EACEE82B44BEB4C89C55 /* CedarvilleCursive-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 20B291F50AE34C26A6B5C456 /* CedarvilleCursive-Regular.ttf */; };
+		7AFA1CA9CD5249DAB8F4AA3B /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BAEE68AA0DF4414487674EA4 /* Pacifico-Regular.ttf */; };
+		1B874480409E4FFAAFA81631 /* Satisfy-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85E559F2E26B4402A43A5F6A /* Satisfy-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		90E47239F5092C5E6E31F30D /* libPods-Somm-SommTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Somm-SommTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C221C4169649D9E487F15E67 /* Pods-Somm-SommTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Somm-SommTests.release.xcconfig"; path = "Target Support Files/Pods-Somm-SommTests/Pods-Somm-SommTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		20B291F50AE34C26A6B5C456 /* CedarvilleCursive-Regular.ttf */ = {isa = PBXFileReference; name = "CedarvilleCursive-Regular.ttf"; path = "../Assets/Fonts/CedarvilleCursive-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BAEE68AA0DF4414487674EA4 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; name = "Pacifico-Regular.ttf"; path = "../Assets/Fonts/Pacifico-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		85E559F2E26B4402A43A5F6A /* Satisfy-Regular.ttf */ = {isa = PBXFileReference; name = "Satisfy-Regular.ttf"; path = "../Assets/Fonts/Satisfy-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +140,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				36FEBDDCDEB49B3C33BA5A69 /* Pods */,
+				BB8ED21E75424966B2914713 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -148,6 +155,17 @@
 			);
 			name = Products;
 			sourceTree = "<group>";
+		};
+		BB8ED21E75424966B2914713 /* Resources */ = {
+			isa = "PBXGroup";
+			children = (
+				20B291F50AE34C26A6B5C456 /* CedarvilleCursive-Regular.ttf */,
+				BAEE68AA0DF4414487674EA4 /* Pacifico-Regular.ttf */,
+				85E559F2E26B4402A43A5F6A /* Satisfy-Regular.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+			path = "";
 		};
 /* End PBXGroup section */
 
@@ -245,6 +263,9 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				EF80EACEE82B44BEB4C89C55 /* CedarvilleCursive-Regular.ttf in Resources */,
+				7AFA1CA9CD5249DAB8F4AA3B /* Pacifico-Regular.ttf in Resources */,
+				1B874480409E4FFAAFA81631 /* Satisfy-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
