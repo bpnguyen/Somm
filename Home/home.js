@@ -5,7 +5,9 @@ import {
     View,
     Text,
     Image,
-    Button
+    Button,
+    TouchableOpacity,
+    Pressable
 } from 'react-native';
 import styles from './styles.js';
 
@@ -14,14 +16,14 @@ const Home = () => {
         <View style={styles.container}>
             <Image
                 style={styles.backgroundImage}
-                source={require('../Assets/Background.png')}>
+                source={require('../Assets/Images/Background.png')}>
             </Image>
             <View style={styles.homeContainer}>
                 <View style={styles.logoContainer}>
-                    <Text style={styles.homeSubheaderText}>
+                    <Text style={styles.logoSubheaderText}>
                         Welcome to
                     </Text>
-                    <Text style={styles.homeHeaderText}>
+                    <Text style={styles.logoHeaderText}>
                         Somm
                     </Text>
                 </View>
@@ -29,14 +31,29 @@ const Home = () => {
                     <Text style={styles.buttonDescText}>
                         Would you like a bottle?
                     </Text>
-                    <Button
-                        title='Indulge me!'
-                        onPress={() => { }}>
-                    </Button>
-                    <Button
-                        title='I want something specific!'
-                        onPress={() => { }}>
-                    </Button>
+                    <View style={styles.buttonContainer}>
+                        <Pressable
+                            style={styles.button}
+                            onpress={() => { }}>
+                            <Text style={styles.buttonText}>
+                                Indulge me!
+                            </Text>
+                        </Pressable>
+                    </View>
+                    <View style={styles.buttonContainer}>
+                        {/* <Button
+                            title='I want something specific!'
+                            color='#fcb9b8'
+                            onPress={() => { }}>
+                        </Button> */}
+                        <Pressable
+                            style={styles.button}
+                            onpress={() => { }}>
+                            <Text style={styles.buttonText}>
+                                I want something specific...
+                            </Text>
+                        </Pressable>
+                    </View>
                 </View>
             </View>
         </View>
