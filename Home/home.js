@@ -1,4 +1,8 @@
-/* Somm - Home Screen */
+/* 
+* Somm - Home Screen 
+* 
+* Creator: Brian Nguyen (bnguyen3@luc.edu)
+*/
 
 import React from 'react';
 import {

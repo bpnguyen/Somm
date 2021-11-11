@@ -1,3 +1,9 @@
+/* 
+* Somm - Home Screen Styles
+* 
+* Creator: Brian Nguyen (bnguyen3@luc.edu)
+*/
+
 import React from 'react';
 import {
     StyleSheet
@@ -82,6 +88,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     buttonText: {
+        color: 'black',
         fontFamily: 'Satisfy-Regular',
         fontSize: 20,
         paddingVertical: 5,
