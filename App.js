@@ -1,5 +1,6 @@
 import React from 'react';
-import Home from './Home/home.js';
+
+import Home from './src/Screens/Home/home.js';
 
 const Somm = () => {
     return (

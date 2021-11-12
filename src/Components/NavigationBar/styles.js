@@ -1,5 +1,5 @@
 /* 
-* Somm - Home Screen Styles
+* Somm - Navigation Bar Styles
 * 
 * Creator: Brian Nguyen (bnguyen3@luc.edu)
 */
@@ -13,86 +13,34 @@ const styles = StyleSheet.create({
     container: {
         display: 'flex',
         flex: 1,
-        justifyContent: 'center',
+        justifyContent: 'flex-end',
         alignItems: 'center'
     },
-    homeContainer: {
+    navContainer: {
         display: 'flex',
+        flex: 0,
+        flexDirection: 'row',
         width: '100%',
-        alignItems: 'center'
-    },
-    backgroundImage: {
-        position: 'absolute',
-        opacity: 0.45
-    },
-    logoContainer: {
-        width: '100%',
-        height: '33%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: "#ad423c",
-        elevation: 15
-    },
-    logoHeaderText: {
-        position: 'absolute',
-        color: 'white',
-        fontFamily: 'Pacifico-Regular',
-        fontSize: 120,
-        textAlign: 'center',
-        textAlignVertical: 'center',
-        textShadowColor: '#171717',
-        textShadowOffset: {
-            width: -3,
-            height: 3
-        },
-        textShadowRadius: 25,
-        paddingBottom: 20
-    },
-    logoSubheaderText: {
-        color: '#fcb9b8',
-        fontFamily: 'Pacifico-Regular',
-        fontSize: 20,
-        textAlign: 'center',
-        textShadowColor: '#171717',
-        textShadowOffset: {
-            width: -3,
-            height: 3
-        },
-        textShadowRadius: 10,
-        paddingTop: 20,
-        paddingBottom: 80
-    },
-    buttonContainer: {
-        display: 'flex',
-        width: '100%',
-        paddingVertical: 10,
-        alignItems: 'center'
-    },
-    buttonDescText: {
-        color: 'black',
-        fontFamily: 'Pacifico-Regular',
-        fontSize: 30,
-        textShadowColor: '#fcb9b8',
-        textShadowOffset: {
-            width: 0,
-            height: 3
-        },
-        textShadowRadius: 10,
-        paddingTop: 30
+        paddingBottom: 10
     },
     button: {
-        width: '70%',
-        backgroundColor: '#fcb9b8',
-        paddingVertical: 10,
-        borderRadius: 10,
+        width: '50%',
+        //height: '100%',
+        backgroundColor: '#ad423c',
+        //paddingVertical: 0,
+        paddingBottom: 4,
         elevation: 5
     },
     buttonText: {
-        color: 'black',
-        fontFamily: 'Satisfy-Regular',
-        fontSize: 20,
-        paddingVertical: 5,
+        color: 'white',
+        fontFamily: 'Pacifico-Regular',
+        fontSize: 18,
+        paddingVertical: 0,
         textAlign: 'center'
+    },
+    separator: {
+        borderWidth: 0.6,
+        borderColor: 'black'
     }
 })
 
