@@ -2,9 +2,6 @@
 * Somm - Navigation Bar
 * 
 * Creator: Brian Nguyen (bnguyen3@luc.edu)
-*
-* Licenses:
-*   - https://fontawesome.com/license
 */
 
 import React from 'react';
@@ -18,19 +15,19 @@ import styles from './styles.js';
 
 const NavigationBar = () => {
     return (
-        <View style={styles.navContainer}>
+        <View style={styles.container}>
             <Pressable
-                style={styles.button}
+                style={styles.pressable}
                 onpress={() => { }}>
-                <Text style={styles.buttonText}>
+                <Text style={styles.pressableText}>
                     Home
                 </Text>
             </Pressable>
             <View style={styles.separator} />
             <Pressable
-                style={styles.button}
+                style={styles.pressable}
                 onpress={() => { }}>
-                <Text style={styles.buttonText}>
+                <Text style={styles.pressableText}>
                     Favorites
                 </Text>
             </Pressable>

@@ -12,18 +12,12 @@ import {
 const styles = StyleSheet.create({
     container: {
         display: 'flex',
-        flex: 1,
-        justifyContent: 'flex-end',
-        alignItems: 'center'
-    },
-    navContainer: {
-        display: 'flex',
         flex: 0,
         flexDirection: 'row',
         width: '100%',
-        paddingBottom: 10
+        paddingBottom: 5
     },
-    button: {
+    pressable: {
         width: '50%',
         //height: '100%',
         backgroundColor: '#ad423c',
@@ -31,7 +25,7 @@ const styles = StyleSheet.create({
         paddingBottom: 4,
         elevation: 5
     },
-    buttonText: {
+    pressableText: {
         color: 'white',
         fontFamily: 'Pacifico-Regular',
         fontSize: 18,
