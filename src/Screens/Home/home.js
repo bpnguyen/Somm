@@ -19,8 +19,8 @@ const Home = () => {
     return (
         <View style={styles.container}>
             <Image
-                style={styles.backgroundImage}
-                source={require('../../Assets/Images/Background.png')}>
+                source={require('../../Assets/Images/Background.png')}
+                style={styles.backgroundImage}>
             </Image>
             <View style={styles.homeContainer}>
                 <View style={styles.logoContainer}>
