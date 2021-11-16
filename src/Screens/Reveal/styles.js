@@ -17,16 +17,40 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-    backgroundImage: {
-        position: 'absolute',
-        opacity: 0.45
-    },
-    homeContainer: {
+    imageContainer: {
         display: 'flex',
         flex: 1,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
+        //backgroundColor: 'goldenrod'
+    },
+    goldSpecklesImage: {
+        resizeMode: 'contain',
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+    },
+    bottleImage: {
+        resizeMode: 'center',
+        width: '100%',
+        height: '100%',
+        position: 'absolute',
+        // shadowColor: '#171717',
+        // shadowOffset: {
+        //     width: -3,
+        //     height: 3
+        // },
+        // shadowRadius: 10,
+        //opacity: 0.45
+    },
+    goldLabelImage: {
+        resizeMode: 'center',
+        width: '45%',
+        height: '45%',
+        position: 'relative',
+        bottom: '18%',
+        left: '10%'
     },
     logoContainer: {
         width: '100%',
@@ -65,10 +89,13 @@ const styles = StyleSheet.create({
         textShadowRadius: 25,
         paddingBottom: 25
     },
-    buttonContainer: {
+    pressableContainer: {
         display: 'flex',
+        flex: 0,
+        flexDirection: 'row',
         width: '100%',
         paddingVertical: 10,
+        justifyContent: 'space-evenly',
         alignItems: 'center'
     },
     buttonDescText: {
@@ -83,14 +110,14 @@ const styles = StyleSheet.create({
         textShadowRadius: 10,
         paddingTop: 30
     },
-    button: {
-        width: '70%',
+    pressable: {
+        width: '45%',
         backgroundColor: '#fcb9b8',
         paddingVertical: 10,
         borderRadius: 10,
         elevation: 5
     },
-    buttonText: {
+    pressableText: {
         color: 'black',
         fontFamily: 'Satisfy-Regular',
         fontSize: 20,

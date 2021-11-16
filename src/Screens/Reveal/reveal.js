@@ -19,42 +19,42 @@ import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
 const Reveal = () => {
     return (
         <View style={styles.container}>
-            <Image
-                style={styles.backgroundImage}
-                source={require('../../Assets/Images/Background.png')}>
-            </Image>
-            <View style={styles.homeContainer}>
-                <View style={styles.logoContainer}>
-                    <Text style={styles.logoSubheaderText}>
-                        Welcome to
+            <HeaderBar />
+            <View style={styles.imageContainer}>
+                <Image
+                    source={require('../../Assets/Images/GoldSpeckles.png')}
+                    style={styles.goldSpecklesImage}>
+                </Image>
+                <Image
+                    source={require('../../Assets/Images/BlankBottle.png')}
+                    style={styles.bottleImage}>
+                </Image>
+                <Image
+                    source={require('../../Assets/Images/GoldLabel.png')}
+                    style={styles.goldLabelImage}>
+                </Image>
+                {/* <View style={styles.imageContainer}>
+                    <Image
+                        source={require('../../Assets/Images/GoldLabel.png')}
+                        style={styles.goldLabelImage}>
+                    </Image>
+                </View> */}
+            </View>
+            <View style={styles.pressableContainer}>
+                <Pressable
+                    style={styles.pressable}
+                    onpress={() => { }}>
+                    <Text style={styles.pressableText}>
+                        Add to Favorites
                     </Text>
-                    <Text style={styles.logoHeaderText}>
-                        Somm
+                </Pressable>
+                <Pressable
+                    style={styles.pressable}
+                    onpress={() => { }}>
+                    <Text style={styles.pressableText}>
+                        Another bottle, please!
                     </Text>
-                </View>
-                <View style={styles.buttonContainer}>
-                    <Text style={styles.buttonDescText}>
-                        Would you like a bottle?
-                    </Text>
-                    <View style={styles.buttonContainer}>
-                        <Pressable
-                            style={styles.button}
-                            onpress={() => { }}>
-                            <Text style={styles.buttonText}>
-                                Indulge me!
-                            </Text>
-                        </Pressable>
-                    </View>
-                    <View style={styles.buttonContainer}>
-                        <Pressable
-                            style={styles.button}
-                            onpress={() => { }}>
-                            <Text style={styles.buttonText}>
-                                I want something specific...
-                            </Text>
-                        </Pressable>
-                    </View>
-                </View>
+                </Pressable>
             </View>
             <NavigationBar />
         </View>
