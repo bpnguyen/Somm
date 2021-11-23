@@ -16,7 +16,9 @@ import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
 import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
 
-const Reveal = () => {
+const Reveal = (props) => {
+    const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
+
     return (
         <View style={styles.container}>
             <HeaderBar />
@@ -43,20 +45,23 @@ const Reveal = () => {
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.pressable}
-                    onpress={() => { }}>
+                    onPress={() => { }}>
                     <Text style={styles.pressableText}>
                         Add to Favorites
                     </Text>
                 </Pressable>
                 <Pressable
                     style={styles.pressable}
-                    onpress={() => { }}>
+                    onPress={() => { }}>
                     <Text style={styles.pressableText}>
                         Another bottle, please!
                     </Text>
                 </Pressable>
             </View>
-            <NavigationBar />
+            {/* <NavigationBar
+                atHome={atHome}
+                atFavorites={atFavorites}
+            /> */}
         </View>
     );
 }

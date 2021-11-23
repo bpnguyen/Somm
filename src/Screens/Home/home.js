@@ -15,7 +15,14 @@ import {
 import styles from './styles.js';
 import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
 
-const Home = () => {
+const Home = (props) => {
+    const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
+
+    const fromHomeToReveal = () => {
+        navigation.navigate('Reveal');
+        //setAtHome(false); // Function not being identified?
+    };
+
     return (
         <View style={styles.container}>
             <Image
@@ -38,7 +45,7 @@ const Home = () => {
                     <View style={styles.buttonContainer}>
                         <Pressable
                             style={styles.button}
-                            onpress={() => { }}>
+                            onPress={() => fromHomeToReveal()}>
                             <Text style={styles.buttonText}>
                                 Indulge me!
                             </Text>
@@ -55,7 +62,10 @@ const Home = () => {
                     </View>
                 </View>
             </View>
-            <NavigationBar />
+            {/* <NavigationBar
+                atHome={atHome}
+                atFavorites={atFavorites}
+            /> */}
         </View>
     );
 }

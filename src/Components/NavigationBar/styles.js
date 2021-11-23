@@ -25,6 +25,14 @@ const styles = StyleSheet.create({
         paddingBottom: 4,
         elevation: 5
     },
+    disabledPressable: {
+        width: '50%',
+        //height: '100%',
+        backgroundColor: 'grey',
+        //paddingVertical: 0,
+        paddingBottom: 4,
+        elevation: 5
+    },
     pressableText: {
         color: 'white',
         fontFamily: 'Pacifico-Regular',
@@ -34,7 +42,7 @@ const styles = StyleSheet.create({
     },
     separator: {
         borderWidth: 0.6,
-        borderColor: 'black'
+        borderColor: '#fcb9b8'
     }
 })
 
