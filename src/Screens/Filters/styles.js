@@ -1,5 +1,5 @@
 /* 
-* Somm - To Be Tried Screen Styles
+* Somm - Filters Screen Styles
 * 
 * Creator: 
 */
@@ -27,10 +27,11 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     navigationPressable: {
-        width: '100%',
+        width: '70%',
         backgroundColor: '#fcb9b8',
-        paddingTop: 5,
-        elevation: 3
+        paddingVertical: 10,
+        borderRadius: 10,
+        elevation: 5
     },
     navigationPressableText: {
         color: 'black',

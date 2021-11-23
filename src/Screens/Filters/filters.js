@@ -1,5 +1,5 @@
 /* 
-* Somm - To Be Tried Screen 
+* Somm - Filters Screen 
 * 
 * Creator: 
 */
@@ -15,11 +15,11 @@ import {
 import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
 
-const ToBeTried = (props) => {
+const Filters = (props) => {
     const { navigation } = props;
 
-    const fromToBeTriedToHaveTried = () => {
-        navigation.navigate('HaveTried');
+    const fromFiltersToReveal = () => {
+        navigation.navigate('Reveal');
     };
 
     return (
@@ -28,9 +28,9 @@ const ToBeTried = (props) => {
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.navigationPressable}
-                    onPress={() => fromToBeTriedToHaveTried()}>
+                    onPress={() => fromFiltersToReveal()}>
                     <Text style={styles.navigationPressableText}>
-                        Go to: Have Tried
+                        Uncork the bottle!
                     </Text>
                 </Pressable>
             </View>
@@ -38,4 +38,4 @@ const ToBeTried = (props) => {
     );
 }
 
-export default ToBeTried;
+export default Filters;

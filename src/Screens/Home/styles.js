@@ -65,13 +65,13 @@ const styles = StyleSheet.create({
         textShadowRadius: 25,
         paddingBottom: 25
     },
-    buttonContainer: {
+    pressableContainer: {
         display: 'flex',
         width: '100%',
         paddingVertical: 10,
         alignItems: 'center'
     },
-    buttonDescText: {
+    pressableDescText: {
         color: 'black',
         fontFamily: 'Pacifico-Regular',
         fontSize: 30,
@@ -83,14 +83,14 @@ const styles = StyleSheet.create({
         textShadowRadius: 10,
         paddingTop: 30
     },
-    button: {
+    navigationPressable: {
         width: '70%',
         backgroundColor: '#fcb9b8',
         paddingVertical: 10,
         borderRadius: 10,
         elevation: 5
     },
-    buttonText: {
+    navigationPressableText: {
         color: 'black',
         fontFamily: 'Satisfy-Regular',
         fontSize: 20,

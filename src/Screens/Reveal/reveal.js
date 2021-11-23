@@ -14,11 +14,12 @@ import {
 
 import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
-import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
+// import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
 
 const Reveal = (props) => {
-    const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
-
+    // const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
+    const { navigation } = props;
+    
     return (
         <View style={styles.container}>
             <HeaderBar />

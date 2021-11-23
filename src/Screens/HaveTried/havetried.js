@@ -1,5 +1,5 @@
 /* 
-* Somm - To Be Tried Screen 
+* Somm - Have Tried Screen 
 * 
 * Creator: 
 */
@@ -15,11 +15,11 @@ import {
 import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
 
-const ToBeTried = (props) => {
+const HaveTried = (props) => {
     const { navigation } = props;
 
-    const fromToBeTriedToHaveTried = () => {
-        navigation.navigate('HaveTried');
+    const fromHaveTriedToToBeTried = () => {
+        navigation.navigate('ToBeTried');
     };
 
     return (
@@ -28,9 +28,9 @@ const ToBeTried = (props) => {
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.navigationPressable}
-                    onPress={() => fromToBeTriedToHaveTried()}>
+                    onPress={() => fromHaveTriedToToBeTried()}>
                     <Text style={styles.navigationPressableText}>
-                        Go to: Have Tried
+                        Go to: To Be Tried
                     </Text>
                 </Pressable>
             </View>
@@ -38,4 +38,4 @@ const ToBeTried = (props) => {
     );
 }
 
-export default ToBeTried;
+export default HaveTried;

@@ -13,14 +13,19 @@ import {
 } from 'react-native';
 
 import styles from './styles.js';
-import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
+// import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
 
 const Home = (props) => {
-    const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
+    // const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
+    const { navigation } = props;
 
     const fromHomeToReveal = () => {
         navigation.navigate('Reveal');
         //setAtHome(false); // Function not being identified?
+    };
+
+    const fromHomeToFilters = () => {
+        navigation.navigate('Filters');
     };
 
     return (
@@ -38,25 +43,25 @@ const Home = (props) => {
                         Somm
                     </Text>
                 </View>
-                <View style={styles.buttonContainer}>
-                    <Text style={styles.buttonDescText}>
+                <View style={styles.pressableContainer}>
+                    <Text style={styles.pressableDescText}>
                         Would you like a bottle?
                     </Text>
-                    <View style={styles.buttonContainer}>
+                    <View style={styles.pressableContainer}>
                         <Pressable
-                            style={styles.button}
+                            style={styles.navigationPressable}
                             onPress={() => fromHomeToReveal()}>
-                            <Text style={styles.buttonText}>
+                            <Text style={styles.navigationPressableText}>
                                 Indulge me!
                             </Text>
                         </Pressable>
                     </View>
-                    <View style={styles.buttonContainer}>
+                    <View style={styles.pressableContainer}>
                         <Pressable
-                            style={styles.button}
-                            onpress={() => { }}>
-                            <Text style={styles.buttonText}>
-                                I want something specific...
+                            style={styles.navigationPressable}
+                            onPress={() => fromHomeToFilters()}>
+                            <Text style={styles.navigationPressableText}>
+                                I want something else...
                             </Text>
                         </Pressable>
                     </View>
