@@ -1,7 +1,7 @@
 /* 
 * Somm - To Be Tried Screen Styles
 * 
-* Creator: 
+* Creator: Brian Nguyen (bnguyen3@luc.edu)
 */
 
 import React from 'react';

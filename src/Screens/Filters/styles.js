@@ -1,7 +1,7 @@
 /* 
 * Somm - Filters Screen Styles
 * 
-* Creator: 
+* Creator: Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
 */
 
 import React from 'react';

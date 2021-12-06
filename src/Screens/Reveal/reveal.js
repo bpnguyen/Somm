@@ -1,7 +1,7 @@
 /* 
 * Somm - Reveal Screen 
 * 
-* Creator: Brian Nguyen (bnguyen3@luc.edu)
+* Creator: Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
 */
 
 import React from 'react';

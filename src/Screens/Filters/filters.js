@@ -1,7 +1,7 @@
 /* 
 * Somm - Filters Screen 
 * 
-* Creator: Adeline Azungue (aazungue@luc.edu)
+* Creator: Adeline Azungue (aazungue@luc.edu), Brian Nguyen (bnguyen3@luc.edu)
 */
 
 import React from 'react';

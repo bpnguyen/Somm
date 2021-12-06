@@ -1,7 +1,7 @@
 /* 
 * Somm - Have Tried Screen 
 * 
-* Creator: 
+* Creator: Brian Nguyen (bnguyen3@luc.edu)
 */
 
 import React from 'react';
