@@ -14,12 +14,26 @@ import {
 
 import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
+import winesJson from '../../Assets/Data/Wines.json'
 // import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
 
 const Reveal = (props) => {
     // const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
     const { navigation } = props;
-    
+
+    // state = {
+    //     Random: ''
+    // }
+    // componentDidMount(){
+    // }
+    var randomArr = [];
+    const random = winesJson[Math.floor(Math.random() * winesJson.length)];
+    randomArr.push(random.Name);
+    randomArr.push(random.Country);
+    randomArr.push(random.Region);
+    randomArr.push(random.Type);
+    randomArr.toString;
+
     return (
         <View style={styles.container}>
             <HeaderBar />
@@ -42,6 +56,13 @@ const Reveal = (props) => {
                         style={styles.goldLabelImage}>
                     </Image>
                 </View> */}
+            </View>
+            <View style={styles.pressableContainer}>
+                <Text style={styles.pressableText}>
+                    {//JSON.stringify(winesJson[Math.floor(Math.random()*winesJson.length)])
+                    randomArr}
+                </Text>
+
             </View>
             <View style={styles.pressableContainer}>
                 <Pressable

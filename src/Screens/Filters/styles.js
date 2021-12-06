@@ -26,6 +26,13 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         alignItems: 'center'
     },
+    dropdownContainer: {
+        width: '100%',
+        backgroundColor: '#fcb9b8',
+        paddingVertical: 1,
+        borderRadius: 1,
+        //elevation: 5
+    },
     navigationPressable: {
         width: '70%',
         backgroundColor: '#fcb9b8',
@@ -39,6 +46,12 @@ const styles = StyleSheet.create({
         fontSize: 20,
         paddingVertical: 5,
         textAlign: 'center'
+    },
+    input: {
+        height: 50,
+        margin: 12,
+        borderWidth: 1,
+        padding: 10,
     }
 })
 
