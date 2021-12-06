@@ -50,12 +50,6 @@ const Reveal = (props) => {
                     source={require('../../Assets/Images/GoldLabel.png')}
                     style={styles.goldLabelImage}>
                 </Image>
-                {/* <View style={styles.imageContainer}>
-                    <Image
-                        source={require('../../Assets/Images/GoldLabel.png')}
-                        style={styles.goldLabelImage}>
-                    </Image>
-                </View> */}
             </View>
             <View style={styles.pressableContainer}>
                 <Text style={styles.pressableText}>
