@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
         elevation: 5
     },
     navigationPressableText: {
-        color: 'black',
+        color: 'white',
         fontFamily: 'Satisfy-Regular',
         fontSize: 20,
         paddingVertical: 5,
