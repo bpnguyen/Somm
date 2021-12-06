@@ -18,7 +18,7 @@ const Somm = () => {
                 initialRouteName='Home'
                 barStyle={{ backgroundColor: '#ad423c' }}
                 tabBarOptions={{
-                    labelStyle: { fontSize: 18 },
+                    labelStyle: { fontSize: 24 },
                     activeTintColor: 'white',
                     inactiveTintColor: '#fcb9b8'
                 }}>
@@ -28,7 +28,11 @@ const Somm = () => {
                     options={{
                         tabBarLabel: 'Home',
                         tabBarIcon: ({ color }) => (
-                            <MaterialCommunityIcons name='home' color={color} size={18} />
+                            <MaterialCommunityIcons
+                                name='home'
+                                color={color}
+                                size={24}
+                            />
                         ),
                     }}
                 />
@@ -38,7 +42,11 @@ const Somm = () => {
                     options={{
                         tabBarLabel: 'Favorites',
                         tabBarIcon: ({ color }) => (
-                            <MaterialCommunityIcons name='heart' color={color} size={18} />
+                            <MaterialCommunityIcons
+                                name='heart'
+                                color={color}
+                                size={24}
+                            />
                         ),
                     }}
                 />

@@ -59,8 +59,8 @@ const Reveal = (props) => {
             </View>
             <View style={styles.pressableContainer}>
                 <Text style={styles.pressableText}>
-                    {//JSON.stringify(winesJson[Math.floor(Math.random()*winesJson.length)])
-                    randomArr}
+                    {/* {JSON.stringify(winesJson[Math.floor(Math.random()*winesJson.length)]) */}
+                    {randomArr}
                 </Text>
 
             </View>
