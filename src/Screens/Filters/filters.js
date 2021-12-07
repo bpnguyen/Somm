@@ -4,7 +4,7 @@
 * Creator: Zac Neuhardt (zneuhardt@luc.edu), Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
 */
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import {
     View,
     Text,
@@ -93,17 +93,29 @@ const Filters = (props) => {
         console.log();
     };
 
-    const [open, setOpen] = React.useState(false);
-    const [value, setValue] = React.useState(null);
+    const [openType, setOpenType] = React.useState(false);
+    const [valueType, setValueType] = React.useState(null);
     const [itemsType, setItemsType] = React.useState(types);
+
+    const onTypeOpen = useCallback(() => {
+        setOpenCountries(false), setOpenRegions(false);
+        }, []);
 
     const [openCountries, setOpenCountries] = React.useState(false);
     const [valueCountries, setValueCountries] = React.useState(null);
     const [itemsCountries, setItemsCountries] = React.useState(countries);
 
+    const onCountryOpen = useCallback(() => {
+            setOpenType(false), setOpenRegions(false);
+            }, []);
+
     const [openRegions, setOpenRegions] = React.useState(false);
     const [valueRegions, setValueRegions] = React.useState(null);
     const [itemsRegions, setItemsRegions] = React.useState(regions);
+
+    const onRegionOpen = useCallback(() => {
+            setOpenCountries(false), setOpenType(false);
+            }, []);
 
     return (
         <View style={styles.container}>
@@ -117,13 +129,14 @@ const Filters = (props) => {
                     </Text>
                     <DropDownPicker
 
-                        open={open}
-                        value={value}
+                        open={openType}
+                        value={valueType}
                         items={itemsType}
-                        setOpen={setOpen}
-                        setValue={setValue}
+                        setOpen={setOpenType}
+                        setValue={setValueType}
                         setItems={setItemsType}
                         defaultIndex={0}
+                        onOpen={onTypeOpen}
                         placeholder='Select a Type'
                         onPress={() => getTypes()}
                         containerStyle={styles.dropdownBoxContainer}
@@ -145,6 +158,7 @@ const Filters = (props) => {
                         setValue={setValueCountries}
                         setItems={setItemsCountries}
                         defaultIndex={0}
+                        onOpen={onCountryOpen}
                         placeholder='Select a Country'
                         onPress={() => getCountries()}
                         containerStyle={styles.dropdownBoxContainer}
@@ -166,6 +180,7 @@ const Filters = (props) => {
                         setValue={setValueRegions}
                         setItems={setItemsRegions}
                         defaultIndex={0}
+                        onOpen={onRegionOpen}
                         placeholder='Select a Region'
                         onPress={() => getRegions()}
                         containerStyle={styles.dropdownBoxContainer}
