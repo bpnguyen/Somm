@@ -82,14 +82,17 @@ const Filters = (props) => {
     const parseJSON = () => {
         getTypes();
         console.log(types);
-        console.log();
+        console.log(typesArr);
+        console.log()
 
         getCountries();
         console.log(countries);
-        console.log();
+        console.log(countriesArr);
+        console.log()
 
         getRegions();
         console.log(regions);
+        console.log(regionsArr);
         console.log();
     };
 
