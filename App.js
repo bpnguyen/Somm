@@ -26,7 +26,7 @@ const Somm = () => {
                 tabBarOptions={{
                     labelStyle: { fontSize: 24 },
                     activeTintColor: 'white',
-                    inactiveTintColor: '#fcb9b8'
+                    inactiveTintColor: '#fcb9b8',
                 }}>
                 <Tab.Screen
                     name='Home'

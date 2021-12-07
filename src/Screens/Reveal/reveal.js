@@ -21,18 +21,20 @@ const Reveal = (props) => {
     // const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
     const { navigation } = props;
 
-    // state = {
-    //     Random: ''
-    // }
-    // componentDidMount(){
-    // }
-    var randomArr = [];
-    const random = winesJson[Math.floor(Math.random() * winesJson.length)];
-    randomArr.push(random.Name);
-    randomArr.push(random.Country);
-    randomArr.push(random.Region);
-    randomArr.push(random.Type);
-    randomArr.toString;
+    const getRandomWine = () => {
+        var randomArr = [];
+
+        const random = winesJson[Math.floor(Math.random() * winesJson.length)];
+
+        randomArr.push(random.Name);
+        randomArr.push(random.Country);
+        randomArr.push(random.Region);
+        randomArr.push(random.Type);
+
+        return randomArr.toString();
+    }
+
+    const [wine, setWine] = React.useState(getRandomWine());
 
     return (
         <View style={styles.container}>
@@ -54,9 +56,8 @@ const Reveal = (props) => {
             <View style={styles.pressableContainer}>
                 <Text style={styles.pressableText}>
                     {/* {JSON.stringify(winesJson[Math.floor(Math.random()*winesJson.length)]) */}
-                    {randomArr}
+                    { wine }
                 </Text>
-
             </View>
             <View style={styles.pressableContainer}>
                 <Pressable
@@ -68,7 +69,7 @@ const Reveal = (props) => {
                 </Pressable>
                 <Pressable
                     style={styles.pressable}
-                    onPress={() => { }}>
+                    onPress={() => { setWine(getRandomWine()) }}>
                     <Text style={styles.pressableText}>
                         Another bottle, please!
                     </Text>

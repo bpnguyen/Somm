@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
     navigationPressableText: {
         color: 'black',
         fontFamily: 'Satisfy-Regular',
-        fontSize: 20,
+        fontSize: 24,
         paddingVertical: 5,
         textAlign: 'center'
     }

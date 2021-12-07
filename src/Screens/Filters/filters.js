@@ -8,7 +8,6 @@ import React from 'react';
 import {
     View,
     Text,
-    Image,
     Pressable,
     TextInput,
 } from 'react-native';
@@ -154,7 +153,7 @@ const Filters = (props) => {
                 //value={value}
                 style={{ padding: 10 }}
             /> */}
-
+ 
                 <View style={styles.pressableContainer}>
                     <Pressable
                         style={styles.navigationPressable}
