@@ -105,17 +105,7 @@ const Reveal = (props) => {
                     style={styles.bottomVinesImage}>
                 </Image>
             </View>
-            {/* <View style={styles.pressableContainer}>
-                <Text style={styles.pressableText}>
-                    { wine.Rating }/5
-                    ${ wine.Price }
-                    { wine.Winery }
-                    { wine.Name }
-                    { wine.Region }
-                    { wine.Country }
-                    { wine.Year }
-                </Text>
-            </View> */}
+
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.pressable}
