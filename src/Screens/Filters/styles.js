@@ -26,25 +26,48 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         alignItems: 'center'
     },
-    dropdownContainer: {
-        width: '100%',
-        backgroundColor: '#fcb9b8',
-        paddingVertical: 1,
-        borderRadius: 1,
-        //elevation: 5
-    },
     navigationPressable: {
         width: '70%',
         backgroundColor: '#fcb9b8',
         paddingVertical: 10,
         borderRadius: 10,
-        elevation: 5
+        elevation: 3
     },
     navigationPressableText: {
         color: 'black',
         fontFamily: 'Satisfy-Regular',
         fontSize: 20,
         paddingVertical: 5,
+        textAlign: 'center'
+    },
+    dropdownContainer: {
+        display: 'flex', 
+        flex: 0,
+        flexDirection: 'row',
+        width: '100%',
+        backgroundColor: '#fcb9b8',
+        justifyContent: 'space-evenly',
+        alignItems: 'center',
+        paddingVertical: 5,
+        elevation: 4
+    },
+    dropdownLabel: {
+        backgroundColor: '#ad423c',
+        color: 'white',
+        fontFamily: 'Pacifico-Regular',
+        fontSize: 18,
+        textAlign: 'center',
+        width: '20%',
+        height: '100%',
+        borderRadius: 10,
+        paddingTop: 3
+    },
+    dropdownBoxContainer: {
+        width: '70%'
+    },
+    dropdownBoxText: {
+        fontFamily: 'Satisfy-Regular',
+        fontSize: 20,
         textAlign: 'center'
     },
     input: {

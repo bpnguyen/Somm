@@ -20,18 +20,28 @@ import winesJson from '../../Assets/Data/Wines.json';
 import text from '../../Components/text.js';
 
 const Filters = (props) => {
+
     const { navigation } = props;
 
     const fromFiltersToReveal = () => {
         navigation.navigate('Reveal');
     };
 
-    var typesArr = [];
+    var types = [{ label: 'N/A', value: 'N/A' }];
     const getTypes = () => {
+        let typesArr = [];
         for (let i = 0; i < winesJson.length; i++) {
             if (!typesArr.includes(winesJson[i].Type)) {
                 typesArr.push(winesJson[i].Type);
             }
+        }
+
+        for (let i = 0; i < typesArr.length; i++) {
+            let dict = {
+                label: typesArr[i],
+                value: typesArr[i]
+            };
+            types.push(dict);
         }
     };
 
@@ -55,7 +65,7 @@ const Filters = (props) => {
 
     const parseJSON = () => {
         getTypes();
-        console.log(typesArr);
+        console.log(types);
         console.log();
 
         getCountries();
@@ -96,25 +106,48 @@ const Filters = (props) => {
     //         );
     //     };
 
+    const [open, setOpen] = React.useState(false);
+    const [value, setValue] = React.useState(null);
+    const [items, setItems] = React.useState(types);
 
     return (
         <View style={styles.container}>
+
             <HeaderBar />
 
-            <DropDownPicker
+            <View style={styles.container}>
+                {/* <DropDownPicker
                 items={[
                     { label: 'Red', value: 'red', selected: true },
                     { label: 'White', value: 'white' },
                     { label: 'Sparkling', value: 'sparkling' }
-
                 ]}
                 defaultNull
                 placeholder="Select Wine Color"
                 defaultIndex={0}
                 containerStyle={{ height: 40 }}
                 onChangeItem={item => console.log(item.label, item.value)}
-            />
-            {/* <UserInput
+            /> */}
+
+                <View style={styles.dropdownContainer}>
+                    <Text style={styles.dropdownLabel}>
+                        Type:
+                    </Text>
+                    <DropDownPicker
+                        open={open}
+                        value={value}
+                        items={items}
+                        setOpen={setOpen}
+                        setValue={setValue}
+                        setItems={setItems}
+                        defaultIndex={0}
+                        onPress={() => getTypes()}
+                        containerStyle={styles.dropdownBoxContainer}
+                        textStyle={styles.dropdownBoxText}
+                    />
+                </View>
+
+                {/* <UserInput
                 multiline
                 numberOfLines={1}
                 onChangeText={text => onChangeCountry(text)}
@@ -122,17 +155,17 @@ const Filters = (props) => {
                 style={{ padding: 10 }}
             /> */}
 
-            <View style={styles.pressableContainer}>
-                <Pressable
-                    style={styles.navigationPressable}
-                    onPress={() => fromFiltersToReveal()}>
-                    <Text style={styles.navigationPressableText}>
-                        Uncork the bottle!
-                    </Text>
-                </Pressable>
-            </View>
+                <View style={styles.pressableContainer}>
+                    <Pressable
+                        style={styles.navigationPressable}
+                        onPress={() => fromFiltersToReveal()}>
+                        <Text style={styles.navigationPressableText}>
+                            Uncork the bottle!
+                        </Text>
+                    </Pressable>
+                </View>
 
-            <View style={styles.pressableContainer}>
+                {/* <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.navigationPressable}
                     onPress={() => parseJSON()}>
@@ -140,8 +173,8 @@ const Filters = (props) => {
                         Test parseJSON function
                     </Text>
                 </Pressable>
+            </View> */}
             </View>
-
         </View>
     );
 
