@@ -40,6 +40,12 @@ const styles = StyleSheet.create({
         paddingVertical: 5,
         textAlign: 'center'
     },
+    filtersContainer: {
+        display: 'flex',
+        flex: 1,
+        flexDirection: 'column',
+        justifyContent: 'space-evenly',
+    },
     dropdownContainer: {
         display: 'flex', 
         flex: 0,

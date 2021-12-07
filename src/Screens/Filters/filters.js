@@ -1,7 +1,7 @@
 /* 
 * Somm - Filters Screen 
 * 
-* Creator: Adeline Azungue (aazungue@luc.edu), Brian Nguyen (bnguyen3@luc.edu), Zac Neuhardt (zneuhardt@luc.edu)
+* Creator: Zac Neuhardt (zneuhardt@luc.edu), Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
 */
 
 import React from 'react';
@@ -110,6 +110,7 @@ const Filters = (props) => {
 
             <HeaderBar />
 
+                <View style={styles.filtersContainer}>
                 <View style={styles.dropdownContainer}>
                     <Text style={styles.dropdownLabel}>
                         Type:
@@ -123,19 +124,20 @@ const Filters = (props) => {
                         setValue={setValue}
                         setItems={setItemsType}
                         defaultIndex={0}
+                        placeholder='Select a Type'
                         onPress={() => getTypes()}
                         containerStyle={styles.dropdownBoxContainer}
                         textStyle={styles.dropdownBoxText}
-                        dropDownContainerStyle={{ zIndex:3000 }}
+                        //dropDownContainerStyle={{ zIndex:3000 }}
                     />
                 </View>
 
-                {/*<View style={styles.dropdownContainer}>
+                <View style={styles.dropdownContainer}>
                     <Text style={styles.dropdownLabel}>
                         Country:
                     </Text>
                     <DropDownPicker
-                        zIndex={9}
+                        //zIndex={9}
                         open={openCountries}
                         value={valueCountries}
                         items={itemsCountries}
@@ -143,10 +145,11 @@ const Filters = (props) => {
                         setValue={setValueCountries}
                         setItems={setItemsCountries}
                         defaultIndex={0}
+                        placeholder='Select a Country'
                         onPress={() => getCountries()}
                         containerStyle={styles.dropdownBoxContainer}
                         textStyle={styles.dropdownBoxText}
-                        dropDownContainerStyle={{ zIndex:2000 }}
+                        //dropDownContainerStyle={{ zIndex:2000 }}
                     />
                 </View>
 
@@ -155,7 +158,7 @@ const Filters = (props) => {
                         Region:
                     </Text>
                      <DropDownPicker
-                        zIndex={8}
+                        //zIndex={8}
                         open={openRegions}
                         value={valueRegions}
                         items={itemsRegions}
@@ -163,12 +166,13 @@ const Filters = (props) => {
                         setValue={setValueRegions}
                         setItems={setItemsRegions}
                         defaultIndex={0}
+                        placeholder='Select a Region'
                         onPress={() => getRegions()}
                         containerStyle={styles.dropdownBoxContainer}
                         textStyle={styles.dropdownBoxText}
-                        dropDownContainerStyle={{ zIndex:1000 }}
+                        //dropDownContainerStyle={{ zIndex:1000 }}
                      />
-                 </View> */}
+                 </View>
 
                 <View style={styles.pressableContainer}>
                     <Pressable
@@ -178,6 +182,7 @@ const Filters = (props) => {
                             Uncork the bottle!
                         </Text>
                     </Pressable>
+                </View>
                 </View>
 
                 {/* <View style={styles.pressableContainer}>
