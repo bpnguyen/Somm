@@ -53,7 +53,7 @@ const Reveal = (props) => {
 
             <View style={styles.textContainer}>
                 <Text style={styles.goldLabelText}>
-                    {wine.Rating}/5{'\n'}
+                    {wine.Rating} / 5{'\n'}
                     ${wine.Price}
                 </Text>
             </View>

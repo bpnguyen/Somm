@@ -109,10 +109,11 @@ const styles = StyleSheet.create({
     goldLabelText: {
         color: 'black',
         fontFamily: 'Satisfy-Regular',
-        fontSize: 25,
+        fontSize: 23,
         position: 'absolute',
         textAlign: 'center',
-        paddingTop: 280,
+        lineHeight: 25,
+        paddingTop: 293,
         paddingLeft: 80
     },
     cornerVinesImage: {
