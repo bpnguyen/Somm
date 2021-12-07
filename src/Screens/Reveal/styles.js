@@ -23,7 +23,28 @@ const styles = StyleSheet.create({
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
-        //backgroundColor: 'goldenrod'
+    },
+    textContainer: {
+        width: '100%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        elevation: 3
+    },
+    test: {
+        display: 'flex',
+        flex: 1,
+        flexGrow: 1,
+        flexDirection: 'column',
+        backgroundColor: 'golden-rod',
+        width: '26%',
+        height: '40%',
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignText: 'center',
+        elevation: 4,
+        position: 'absolute',
+        paddingTop: 66,
+        paddingRight: 2
     },
     goldSpecklesImage: {
         resizeMode: 'contain',
@@ -36,13 +57,46 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         position: 'absolute',
-        // shadowColor: '#171717',
-        // shadowOffset: {
-        //     width: -3,
-        //     height: 3
-        // },
-        // shadowRadius: 10,
-        //opacity: 0.45
+    },
+    wineryText: {
+        color: 'black',
+        fontFamily: 'Satisfy-Regular',
+        fontSize: 15,
+        position: 'absolute',
+        textAlign: 'center',
+        lineHeight: 16,
+        width: '25%',
+        paddingTop: 450
+    },
+    nameText: {
+        color: 'black',
+        fontFamily: 'Pacifico-Regular',
+        fontSize: 16,
+        position: 'absolute',
+        textAlign: 'center',
+        lineHeight: 21,
+        width: '25%',
+        paddingTop: 575
+    },
+    regionText: {
+        color: 'black',
+        fontFamily: 'Satisfy-Regular',
+        fontSize: 14,
+        position: 'absolute',
+        justifyContent: 'flex-end',
+        textAlign: 'center',
+        width: '25%',
+        lineHeight: 16,
+        paddingTop: 710
+    },
+    yearText: {
+        color: '#A8A8A8',
+        fontFamily: 'Satisfy-Regular',
+        fontSize: 18,
+        position: 'absolute',
+        textAlign: 'center',
+        width: '25%',
+        paddingTop: 800
     },
     goldLabelImage: {
         resizeMode: 'center',
@@ -52,42 +106,32 @@ const styles = StyleSheet.create({
         bottom: '18%',
         left: '10%'
     },
-    logoContainer: {
-        width: '100%',
-        height: '26%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        backgroundColor: "#ad423c",
-        elevation: 15
-    },
-    logoSubheaderText: {
-        color: '#fcb9b8',
-        fontFamily: 'Pacifico-Regular',
-        fontSize: 20,
-        textAlign: 'center',
-        textShadowColor: '#171717',
-        textShadowOffset: {
-            width: -3,
-            height: 3
-        },
-        textShadowRadius: 10,
-        paddingTop: 15,
-        paddingBottom: 80
-    },
-    logoHeaderText: {
+    goldLabelText: {
+        color: 'black',
+        fontFamily: 'Satisfy-Regular',
+        fontSize: 25,
         position: 'absolute',
-        color: 'white',
-        fontFamily: 'Pacifico-Regular',
-        fontSize: 120,
         textAlign: 'center',
-        textAlignVertical: 'center',
-        textShadowColor: '#171717',
-        textShadowOffset: {
-            width: -3,
-            height: 3
-        },
-        textShadowRadius: 25,
-        paddingBottom: 25
+        paddingTop: 280,
+        paddingLeft: 80
+    },
+    cornerVinesImage: {
+        resizeMode: 'center',
+        width: '55%',
+        height: '55%',
+        position: 'absolute',
+        top: '57%',
+        left: '18%',
+        opacity: 0.9
+    },
+    bottomVinesImage: {
+        resizeMode: 'center',
+        width: '55%',
+        height: '55%',
+        position: 'absolute',
+        top: '68%',
+        left: '23%',
+        opacity: 0.6
     },
     pressableContainer: {
         display: 'flex',
