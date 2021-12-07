@@ -16,7 +16,6 @@ import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
 import DropDownPicker from 'react-native-dropdown-picker';
 import winesJson from '../../Assets/Data/Wines.json';
-import text from '../../Components/text.js';
 
 const Filters = (props) => {
 
@@ -76,35 +75,6 @@ const Filters = (props) => {
         console.log();
     };
 
-    //     const result = winesJson.filter(type => type.Type == "Red");
-    //     const random = result[Math.floor(Math.random()*result.length)];
-    //     console.log(random);
-
-    // let input = '';
-    // let filterArr = [];
-
-    // const UserInput = () => {
-    //     //let input = '';
-    //     const saveUserInput = userInput => {
-    //       input = userInput;
-
-    //       //setTimeout(() => {  console.log(input); }, 2000); 
-
-    //     };
-
-    //         return (
-    //             <View>
-    //                 <TextInput
-    //                     style={styles.input}
-    //                     onChangeText={userInput => saveUserInput(userInput)}
-    //                 />
-    //                 <TextInput
-    //                     style={styles.input}
-    //                 />
-    //             </View>
-    //         );
-    //     };
-
     const [open, setOpen] = React.useState(false);
     const [value, setValue] = React.useState(null);
     const [items, setItems] = React.useState(types);
@@ -115,19 +85,6 @@ const Filters = (props) => {
             <HeaderBar />
 
             <View style={styles.container}>
-                {/* <DropDownPicker
-                items={[
-                    { label: 'Red', value: 'red', selected: true },
-                    { label: 'White', value: 'white' },
-                    { label: 'Sparkling', value: 'sparkling' }
-                ]}
-                defaultNull
-                placeholder="Select Wine Color"
-                defaultIndex={0}
-                containerStyle={{ height: 40 }}
-                onChangeItem={item => console.log(item.label, item.value)}
-            /> */}
-
                 <View style={styles.dropdownContainer}>
                     <Text style={styles.dropdownLabel}>
                         Type:
