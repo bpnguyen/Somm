@@ -38,6 +38,6 @@ This program utilizes the [Wine Rating & Price](https://www.kaggle.com/budnyak/w
 2) Replace existing `App.js`, `App.json`, `index.js`, `package.json`, and (if applicable) `react-native.config.js` files in the project's `root` folder.
 3) Add `StackRoutes.js` into project's `root` folder.
 4) Add `./src` directory into project's `root` folder.
-5) Execute `npm install` to install all required Node module dependencies.
-6) Execute `npx react-native link` to link all assets to React Native project files.
+5) Execute `npm install` to install all required Node module dependencies from the project's `root` folder.
+6) Execute `npx react-native link` to link all assets to React Native project files project's `root` folder.
 7) This project was designed and built using Android, it is suggested to start the project with `npx react-native run-android` from the project's `root` folder.
