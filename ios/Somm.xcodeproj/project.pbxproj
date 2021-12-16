@@ -36,6 +36,7 @@
 		6B1625E3CCAC4B4F98C7BD34 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C8ABC84C62D24658AA44862B /* Octicons.ttf */; };
 		972DF6B8EE2E4983B2AEBB6D /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 413973BD6FB849D28BC341BB /* SimpleLineIcons.ttf */; };
 		43FAAB8DDDA74D3380C9DF0A /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BA80F7A5057C43B6AE3958CE /* Zocial.ttf */; };
+		F0BC2AADDA0E4AB1ACB0858B /* Courgette-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 37F319A3CFFD46EB92F9AD4E /* Courgette-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		C8ABC84C62D24658AA44862B /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		413973BD6FB849D28BC341BB /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		BA80F7A5057C43B6AE3958CE /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		37F319A3CFFD46EB92F9AD4E /* Courgette-Regular.ttf */ = {isa = PBXFileReference; name = "Courgette-Regular.ttf"; path = "../src/Assets/Fonts/Courgette-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -219,6 +221,7 @@
 				C8ABC84C62D24658AA44862B /* Octicons.ttf */,
 				413973BD6FB849D28BC341BB /* SimpleLineIcons.ttf */,
 				BA80F7A5057C43B6AE3958CE /* Zocial.ttf */,
+				37F319A3CFFD46EB92F9AD4E /* Courgette-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				6B1625E3CCAC4B4F98C7BD34 /* Octicons.ttf in Resources */,
 				972DF6B8EE2E4983B2AEBB6D /* SimpleLineIcons.ttf in Resources */,
 				43FAAB8DDDA74D3380C9DF0A /* Zocial.ttf in Resources */,
+				F0BC2AADDA0E4AB1ACB0858B /* Courgette-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

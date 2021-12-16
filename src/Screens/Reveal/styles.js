@@ -30,22 +30,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         elevation: 3
     },
-    test: {
-        display: 'flex',
-        flex: 1,
-        flexGrow: 1,
-        flexDirection: 'column',
-        backgroundColor: 'golden-rod',
-        width: '26%',
-        height: '40%',
-        justifyContent: 'center',
-        alignItems: 'center',
-        alignText: 'center',
-        elevation: 4,
-        position: 'absolute',
-        paddingTop: 66,
-        paddingRight: 2
-    },
     goldSpecklesImage: {
         resizeMode: 'contain',
         width: '100%',
@@ -60,7 +44,7 @@ const styles = StyleSheet.create({
     },
     wineryText: {
         color: 'black',
-        fontFamily: 'Satisfy-Regular',
+        fontFamily: 'Courgette-Regular',
         fontSize: 15,
         position: 'absolute',
         textAlign: 'center',
@@ -80,7 +64,7 @@ const styles = StyleSheet.create({
     },
     regionText: {
         color: 'black',
-        fontFamily: 'Satisfy-Regular',
+        fontFamily: 'Courgette-Regular',
         fontSize: 14,
         position: 'absolute',
         justifyContent: 'flex-end',
@@ -91,12 +75,12 @@ const styles = StyleSheet.create({
     },
     yearText: {
         color: '#A8A8A8',
-        fontFamily: 'Satisfy-Regular',
+        fontFamily: 'Courgette-Regular',
         fontSize: 18,
         position: 'absolute',
         textAlign: 'center',
         width: '25%',
-        paddingTop: 800
+        paddingTop: 803
     },
     goldLabelImage: {
         resizeMode: 'center',
@@ -108,12 +92,12 @@ const styles = StyleSheet.create({
     },
     goldLabelText: {
         color: 'black',
-        fontFamily: 'Satisfy-Regular',
-        fontSize: 23,
+        fontFamily: 'Courgette-Regular',
+        fontSize: 21,
         position: 'absolute',
         textAlign: 'center',
         lineHeight: 25,
-        paddingTop: 293,
+        paddingTop: 287,
         paddingLeft: 80
     },
     cornerVinesImage: {
@@ -164,8 +148,8 @@ const styles = StyleSheet.create({
     },
     pressableText: {
         color: 'black',
-        fontFamily: 'Satisfy-Regular',
-        fontSize: 20,
+        fontFamily: 'Courgette-Regular',
+        fontSize: 16,
         paddingVertical: 5,
         textAlign: 'center'
     }

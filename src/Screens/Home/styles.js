@@ -92,7 +92,8 @@ const styles = StyleSheet.create({
     },
     navigationPressableText: {
         color: 'black',
-        fontFamily: 'Satisfy-Regular',
+        //fontFamily: 'Satisfy-Regular',
+        fontFamily: 'Courgette-Regular',
         fontSize: 24,
         paddingVertical: 5,
         textAlign: 'center'

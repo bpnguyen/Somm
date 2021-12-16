@@ -15,10 +15,8 @@ import {
 import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
 import winesJson from '../../Assets/Data/Wines.json'
-// import NavigationBar from '../../Components/NavigationBar/navigationbar.js';
 
 const Reveal = (props) => {
-    // const { navigation, atHome, setAtHome, atFavorites, setAtFavorites } = props;
     const { navigation } = props;
 
     const getRandomWine = () => {
@@ -43,13 +41,6 @@ const Reveal = (props) => {
     return (
         <View style={styles.container}>
             <HeaderBar />
-
-            {/* <View style={styles.test}>
-                <Text style={{backgroundColor: 'grey', width: '100%', height: '100%', textAlign: 'center', flex: 1.25}}>{wine.Winery}</Text>
-                <Text style={{backgroundColor: 'red', width: '100%', height: '100%', textAlign: 'center', flex: 2}}>{wine.Name}</Text>
-                <Text style={{backgroundColor: 'grey', width: '100%', height: '100%', textAlign: 'center', flex: 1.25}}>{wine.Region},{'\n'}
-                    {wine.Country}</Text>
-            </View> */}
 
             <View style={styles.textContainer}>
                 <Text style={styles.goldLabelText}>
@@ -88,27 +79,37 @@ const Reveal = (props) => {
                     source={require('../../Assets/Images/GoldSpeckles.png')}
                     style={styles.goldSpecklesImage}>
                 </Image>
+
                 <Image
                     source={require('../../Assets/Images/BlankBottle.png')}
                     style={styles.bottleImage}>
                 </Image>
+
                 <Image
                     source={require('../../Assets/Images/GoldLabel.png')}
                     style={styles.goldLabelImage}>
                 </Image>
+
                 <Image
                     source={require('../../Assets/Images/CornerVines.png')}
                     style={styles.cornerVinesImage}>
                 </Image>
+
                 <Image
                     source={require('../../Assets/Images/BottomVines.png')}
                     style={styles.bottomVinesImage}>
                 </Image>
             </View>
 
+            {/* Add information box with same wine metadata in plain text for readability 
+            for those that English is not their native language */}
+
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.pressable}
+                    // Add function to save wine's ID (create incrementing ID in JSON file) 
+                    // to AsyncStorage, then call the array in the favorite's page to display 
+                    // as a list
                     onPress={() => { }}>
                     <Text style={styles.pressableText}>
                         Add to Favorites
@@ -122,10 +123,6 @@ const Reveal = (props) => {
                     </Text>
                 </Pressable>
             </View>
-            {/* <NavigationBar
-                atHome={atHome}
-                atFavorites={atFavorites}
-            /> */}
         </View>
     );
 }

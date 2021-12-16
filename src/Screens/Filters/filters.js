@@ -125,6 +125,9 @@ const Filters = (props) => {
 
             <HeaderBar />
 
+                {/* Use modal boxes? in which native device has a scrollable box to choose,
+                would remove overlapping issue and just updates the chosen filter text value */}
+
                 <View style={styles.filtersContainer}>
                 <View style={styles.dropdownContainer}>
                     <Text style={styles.dropdownLabel}>
