@@ -8,16 +8,18 @@ import React from 'react';
 import {
     View,
     Text,
-    Image,
     Pressable,
-    FlatList
+    FlatList,
+    Alert,
+    Modal
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const ToBeTried = (props) => {
+const Favorites = (props) => {
     const { navigation } = props;
 
     const [mounted, setMounted] = React.useState(false)
@@ -56,16 +58,24 @@ const ToBeTried = (props) => {
         setMounted(true)
     }, [])
 
+    const [modalVisible, setModalVisible] = React.useState(false)
+    const [selectedItem, setSelectedItem] = React.useState('N/A')
+    const getInfo = ({ item }) => {
+        setSelectedItem(item)
+        setModalVisible(true)
+    }
+
     const ListItem = ({ item }) => {
         return (
             <View style={styles.listItem}>
-                <Text style={styles.listText}>
+                <Text
+                    style={styles.listText}
+                    onPress={() => getInfo({ item })}>
                     {item.Name}
                 </Text>
 
                 <View style={styles.listDivider} />
             </View>
-
         )
     }
 
@@ -96,7 +106,7 @@ const ToBeTried = (props) => {
                 </Pressable>
             </View> */}
 
-            <View style={styles.pressableContainer}>
+            {/* <View style={styles.listContainer}>
                 <Pressable
                     style={styles.pressable}
                     onPress={() => getFavorites()}>
@@ -104,17 +114,72 @@ const ToBeTried = (props) => {
                         Refresh Favorites
                     </Text>
                 </Pressable>
-            </View>
+            </View> */}
 
-            <FlatList
-                data={favorites}
-                renderItem={({ item }) => <ListItem item={item} />}
-            />
+            <SafeAreaView style={styles.listContainer}>
+                <FlatList
+                    data={favorites}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({ item }) => <ListItem item={item} />}
+                />
+
+                <View style={styles.modalContainer}>
+                <Modal
+                    animationType='slide'
+                    transparent={true}
+                    visible={modalVisible}
+                    onRequestClose={() => {
+                        setModalVisible(!modalVisible)
+                    }}
+                >
+                    <View style={styles.modalContainer}>
+                        <View style={styles.modalView}>
+                            <Text style={styles.modalText}>
+                                Name:   {'\t'.repeat(5)} {selectedItem.Name}{'\n'}
+                                Type:   {'\t'.repeat(6)} {selectedItem.Type}{'\n'}
+                                Country:{'\t'.repeat(3)} {selectedItem.Country}{'\n'}
+                                Region: {'\t'.repeat(4)} {selectedItem.Region}{'\n'}
+                                Winery: {'\t'.repeat(4)} {selectedItem.Winery}{'\n'}
+                                Year:   {'\t'.repeat(6)} {selectedItem.Year}{'\n'}
+                                Rating: {'\t'.repeat(5)} {selectedItem.Rating}{'\n'}
+                                Price:  {'\t'.repeat(6)} ${selectedItem.Price}
+                            </Text>
+
+                            <Pressable
+                                style={styles.modalPressable}
+                                onPress={() => setModalVisible(!modalVisible)}
+                            >
+                                <Text style={styles.modalPressableText}>
+                                    All done!
+                                </Text>
+                            </Pressable>
+                        </View>
+                    </View>
+                </Modal>
+            </View>
+            </SafeAreaView>
+
+            {/* <View style={styles.pressableContainer}>
+                <Pressable
+                    style={styles.pressable}
+                    onPress={() => clearAsync()}>
+                    <Text style={styles.pressableText}>
+                        {clearedText}
+                    </Text>
+                </Pressable>
+            </View> */}
 
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.pressable}
-                    onPress={() => clearAsync()}>
+                    onPress={() => { getFavorites() }}>
+                    <Text style={styles.pressableText}>
+                        Refresh Favorites
+                    </Text>
+                </Pressable>
+                <Pressable
+                    style={styles.pressable}
+                    onPress={() => { clearAsync() }}>
                     <Text style={styles.pressableText}>
                         {clearedText}
                     </Text>
@@ -124,4 +189,4 @@ const ToBeTried = (props) => {
     );
 }
 
-export default ToBeTried;
+export default Favorites;
