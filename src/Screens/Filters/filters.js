@@ -1,7 +1,7 @@
 /* 
 * Somm - Filters Screen 
 * 
-* Creator: Zac Neuhardt (zneuhardt@luc.edu), Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
+* Creators: Zac Neuhardt (zneuhardt@luc.edu), Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
 */
 
 import React, { useCallback } from 'react';

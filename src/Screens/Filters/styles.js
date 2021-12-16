@@ -35,7 +35,6 @@ const styles = StyleSheet.create({
     },
     navigationPressableText: {
         color: 'black',
-        // fontFamily: 'Satisfy-Regular',
         fontFamily: 'Courgette-Regular',
         fontSize: 20,
         paddingVertical: 5,
@@ -73,7 +72,6 @@ const styles = StyleSheet.create({
         width: '70%'
     },
     dropdownBoxText: {
-        // fontFamily: 'Satisfy-Regular',
         fontFamily: 'Courgette-Regular',
         fontSize: 20,
         textAlign: 'center'

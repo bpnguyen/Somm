@@ -1,5 +1,5 @@
 /* 
-* Somm - Have Tried Screen Styles
+* Somm - Favorites Screen Styles
 * 
 * Creator: Brian Nguyen (bnguyen3@luc.edu)
 */
@@ -26,17 +26,35 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly',
         alignItems: 'center'
     },
-    navigationPressable: {
+    listItem: {
         width: '100%',
-        backgroundColor: '#fcb9b8',
+        backgroundColor: '#ffdab9',
         paddingTop: 5,
-        elevation: 3
+        elevation: 1
     },
-    navigationPressableText: {
+    listText: {
         color: 'black',
-        // fontFamily: 'Satisfy-Regular',
-        fontFamily: 'Courgette-Regular',
+        fontFamily: 'PlayfairDisplaySC-Regular',
         fontSize: 20,
+        paddingVertical: 5,
+        textAlign: 'center'
+    },
+    listDivider: {
+        height: 1,
+        width: "100%",
+        backgroundColor: "#c4c3d0"
+    },
+    pressable: {
+        width: '45%',
+        backgroundColor: '#fcb9b8',
+        paddingVertical: 10,
+        borderRadius: 10,
+        elevation: 5
+    },
+    pressableText: {
+        color: 'black',
+        fontFamily: 'Courgette-Regular',
+        fontSize: 18,
         paddingVertical: 5,
         textAlign: 'center'
     }

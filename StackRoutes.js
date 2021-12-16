@@ -1,11 +1,16 @@
+/* 
+* Somm - Stack Routes
+* 
+* Creator: Brian Nguyen (bnguyen3@luc.edu)
+*/
+
 import React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Home from './src/Screens/Home/home.js';
 import Reveal from './src/Screens/Reveal/reveal.js';
 import Filters from './src/Screens/Filters/filters.js';
-import ToBeTried from './src/Screens/ToBeTried/tobetried.js';
-import HaveTried from './src/Screens/HaveTried/havetried.js';
+import Favorites from './src/Screens/Favorites/favorites.js';
 
 const Stack = createStackNavigator();
 
@@ -40,12 +45,8 @@ const FavoritesNavigator = () => {
             headerShown: false
         }}>
             <Stack.Screen
-                name='ToBeTried'
-                component={ToBeTried}
-            />
-            <Stack.Screen
-                name='HaveTried'
-                component={HaveTried}
+                name='Favorites'
+                component={Favorites}
             />
         </Stack.Navigator>
     )

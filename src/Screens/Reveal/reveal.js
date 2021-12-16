@@ -1,7 +1,7 @@
 /* 
 * Somm - Reveal Screen 
 * 
-* Creator: Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
+* Creators: Brian Nguyen (bnguyen3@luc.edu), Adeline Azungue (aazungue@luc.edu)
 */
 
 import React from 'react';
@@ -11,6 +11,7 @@ import {
     Image,
     Pressable
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import styles from './styles.js';
 import HeaderBar from '../../Components/HeaderBar/headerbar.js';
@@ -19,24 +20,34 @@ import winesJson from '../../Assets/Data/Wines.json'
 const Reveal = (props) => {
     const { navigation } = props;
 
+    const [addedText, setAddedText] = React.useState('Add to Favorites')
+    const onAddFavorites = event => setAddedText('Added!')
+
     const getRandomWine = () => {
         const randomWine = winesJson[Math.floor(Math.random() * winesJson.length)];
-
-        let randomWineDict = {
-            'Name': randomWine.Name.substring(0, (randomWine.Name.length - 5)),
-            'Country': randomWine.Country,
-            'Region': randomWine.Region,
-            'Winery': randomWine.Winery,
-            'Rating': randomWine.Rating,
-            'Price': randomWine.Price.toFixed(2),
-            'Year': randomWine.Year,
-            'Type': randomWine.Type
-        };
-
-        return randomWineDict;
+        return randomWine;
     }
 
     const [wine, setWine] = React.useState(getRandomWine());
+    
+    let wineDict = {
+        'Name': wine.Name.substring(0, (wine.Name.length - 5)),
+        'Country': wine.Country,
+        'Region': wine.Region,
+        'Winery': wine.Winery,
+        'Rating': wine.Rating,
+        'Price': wine.Price.toFixed(2),
+        'Year': wine.Year,
+        'Type': wine.Type
+    };
+
+    const writeItemToStorage = async (key, jsonObj) => {
+        try {
+            await AsyncStorage.setItem(key, JSON.stringify(jsonObj))
+        } catch(error) {
+            console.log('ERROR: There was an issue writing to AsyncStorage.')
+        }
+    }
 
     return (
         <View style={styles.container}>
@@ -44,33 +55,33 @@ const Reveal = (props) => {
 
             <View style={styles.textContainer}>
                 <Text style={styles.goldLabelText}>
-                    {wine.Rating} / 5{'\n'}
-                    ${wine.Price}
+                    {wineDict.Rating} / 5{'\n'}
+                    ${wineDict.Price}
                 </Text>
             </View>
 
             <View style={styles.textContainer}>
                 <Text style={styles.wineryText}>
-                    {wine.Winery}
+                    {wineDict.Winery}
                 </Text>
             </View>
 
             <View style={styles.textContainer}>
                 <Text style={styles.nameText}>
-                    {wine.Name}
+                    {wineDict.Name}
                 </Text>
             </View>
 
             <View style={styles.textContainer}>
                 <Text style={styles.regionText}>
-                    {wine.Region},{'\n'}
-                    {wine.Country}
+                    {wineDict.Region},{'\n'}
+                    {wineDict.Country}
                 </Text>
             </View>
 
             <View style={styles.textContainer}>
                 <Text style={styles.yearText}>
-                    {wine.Year}
+                    {wineDict.Year}
                 </Text>
             </View>
 
@@ -101,23 +112,20 @@ const Reveal = (props) => {
                 </Image>
             </View>
 
-            {/* Add information box with same wine metadata in plain text for readability 
-            for those that English is not their native language */}
-
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.pressable}
                     // Add function to save wine's ID (create incrementing ID in JSON file) 
                     // to AsyncStorage, then call the array in the favorite's page to display 
                     // as a list
-                    onPress={() => { }}>
+                    onPress={() => { onAddFavorites(), writeItemToStorage(wine.Name, wine) }}>
                     <Text style={styles.pressableText}>
-                        Add to Favorites
+                        { addedText }
                     </Text>
                 </Pressable>
                 <Pressable
                     style={styles.pressable}
-                    onPress={() => { setWine(getRandomWine()) }}>
+                    onPress={() => { setWine(getRandomWine()), setAddedText('Add to Favorites') }}>
                     <Text style={styles.pressableText}>
                         Another bottle, please!
                     </Text>
