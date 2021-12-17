@@ -115,9 +115,6 @@ const Reveal = (props) => {
             <View style={styles.pressableContainer}>
                 <Pressable
                     style={styles.pressable}
-                    // Add function to save wine's ID (create incrementing ID in JSON file) 
-                    // to AsyncStorage, then call the array in the favorite's page to display 
-                    // as a list
                     onPress={() => { onAddFavorites(), writeItemToStorage(wine.Name, wine) }}>
                     <Text style={styles.pressableText}>
                         { addedText }
